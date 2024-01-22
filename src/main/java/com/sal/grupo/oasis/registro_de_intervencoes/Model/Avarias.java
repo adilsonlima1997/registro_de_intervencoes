@@ -17,8 +17,9 @@ public class Avarias {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int numero_quarto;
+    private int id;
     private String hotel;
+    private int numero_quarto;
     private String equipamento;
     private String por_quem;
     private String descrição;
