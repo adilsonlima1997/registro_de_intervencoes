@@ -2,7 +2,9 @@ package com.sal.grupo.oasis.registro_de_intervencoes.Controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,5 +31,10 @@ public class Controle {
     @PutMapping("/")
     public Avarias editar(@RequestBody Avarias c){
         return repositorio.save(c);
+    }
+
+    @DeleteMapping("/{numero_quarto}")
+    public void remover(@PathVariable int numero_quarto){
+        repositorio.deleteById(numero_quarto);
     }
 }
