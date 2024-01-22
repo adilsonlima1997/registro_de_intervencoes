@@ -1,8 +1,10 @@
 package com.sal.grupo.oasis.registro_de_intervencoes.Controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +22,12 @@ public class Controle {
         return repositorio.save(c);
     }
     @GetMapping("/")
-    public String teste(){
-        return "Hello World";
+    public Iterable<Avarias> selecionar(){
+        return repositorio.findAll();
+    }
+
+    @PutMapping("/")
+    public Avarias editar(@RequestBody Avarias c){
+        return repositorio.save(c);
     }
 }
