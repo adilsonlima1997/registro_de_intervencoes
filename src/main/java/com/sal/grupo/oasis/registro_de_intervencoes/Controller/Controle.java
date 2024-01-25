@@ -35,8 +35,8 @@ public class Controle {
         return repositorio.save(c);
     }
 
-    @DeleteMapping("/{numero_quarto}")
-    public void remover(@PathVariable int numero_quarto){
-        repositorio.deleteById(numero_quarto);
+    @DeleteMapping("/{id}")
+    public void remover(@PathVariable int id){
+        repositorio.deleteById(id);
     }
 }

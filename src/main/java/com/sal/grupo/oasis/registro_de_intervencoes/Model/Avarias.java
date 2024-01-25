@@ -1,6 +1,7 @@
 package com.sal.grupo.oasis.registro_de_intervencoes.Model;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,11 +17,11 @@ import lombok.Setter;
 public class Avarias {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int numero_quarto;
     private String hotel;
     private String equipamento;
     private String por_quem;
-    private String descrição;
+    private String descricao;
     
 }
